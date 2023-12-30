@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import counterReducer from "./counter/counterSlice";
 
 // Create store using configurestore
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    counter: counterReducer,
+  },
 });
 
 // Rootstate return type while using with useSelector hook
